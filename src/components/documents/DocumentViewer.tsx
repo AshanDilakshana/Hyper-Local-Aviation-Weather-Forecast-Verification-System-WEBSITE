@@ -68,7 +68,7 @@ export function DocumentViewer({ doc }: DocumentViewerProps) {
         }
       </div>
 
-      <div className="flex min-h-[520px] flex-col border-t border-line bg-alt lg:col-span-7 lg:min-h-[680px] lg:border-l lg:border-t-0">
+      <div className="flex min-h-[380px] sm:min-h-[520px] flex-col border-t border-line bg-alt lg:col-span-7 lg:min-h-[680px] lg:border-l lg:border-t-0">
         <div className="flex items-center justify-between border-b border-line px-5 py-3">
           <span className="font-mono text-sm text-muted">{doc.fileName}</span>
           <span className="text-sm text-muted">{status === 'checking' ? 'Checking…' : available ? 'Preview' : 'Not found'}</span>
