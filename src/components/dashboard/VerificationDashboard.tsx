@@ -1,6 +1,6 @@
 import React from 'react';
-import { AlertCircleIcon, DatabaseZapIcon, RefreshCwIcon } from 'lucide-react';
-import { DEMO_LABEL, demoParameters } from '../../data/demoVerification';
+import { AlertCircleIcon, DatabaseZapIcon, RadioIcon, RefreshCwIcon } from 'lucide-react';
+import { demoParameters } from '../../data/demoVerification';
 import { buttonStyles, focusRing } from '../../utils/styles';
 import { Section } from '../layout/Section';
 import { SectionHeading } from '../SectionHeading';
@@ -16,9 +16,8 @@ function DashboardBody() {
       <div className="grid gap-6 lg:grid-cols-12" aria-busy="true">
         <div className="h-96 animate-pulse rounded-xl bg-alt lg:col-span-8" />
         <div className="h-96 animate-pulse rounded-xl bg-alt lg:col-span-4" />
-        <span className="sr-only">Loading demonstration data</span>
+        <span className="sr-only">Loading live weather data from Aviation Weather API…</span>
       </div>);
-
   }
 
   if (d.status === 'error') {
@@ -26,12 +25,11 @@ function DashboardBody() {
       <div className="flex flex-col items-center py-14 text-center" role="alert">
         <AlertCircleIcon className="h-7 w-7 text-danger" aria-hidden="true" />
         <p className="mt-3 text-lg font-semibold text-ink">Verification data could not be loaded</p>
-        <p className="mt-1 text-[15px] text-muted">The data source did not respond.</p>
+        <p className="mt-1 text-[15px] text-muted">The Aviation Weather API did not respond. Check your connection and try again.</p>
         <button type="button" onClick={d.reload} className={`${buttonStyles.secondary} mt-5`}>
           <RefreshCwIcon className="h-4 w-4" aria-hidden="true" /> Try again
         </button>
       </div>);
-
   }
 
   if (d.status === 'empty' || !d.data || !d.metrics || !d.selected) {
@@ -41,11 +39,12 @@ function DashboardBody() {
         <p className="mt-3 text-lg font-semibold text-ink">No verification records yet</p>
         <p className="mt-1 text-[15px] text-muted">Forecasts appear once predictions and matching observations exist.</p>
       </div>);
-
   }
 
   const { data, param, hourIndex } = d;
-  const issued = hourIndex > 0 ? data.hours[hourIndex - 1] : `${String(Number(data.hours[0].slice(0, 2)) - data.horizonHours).padStart(2, '0')}:00`;
+  const issued = hourIndex > 0
+    ? data.hours[hourIndex - 1]
+    : `${String(Number(data.hours[0].slice(0, 2)) - data.horizonHours).padStart(2, '0')}:00`;
 
   return (
     <>
@@ -64,18 +63,18 @@ function DashboardBody() {
                   aria-pressed={active}
                   onClick={() => d.setParamId(p.id)}
                   className={`whitespace-nowrap rounded-lg border px-3 py-2 text-sm font-medium transition-colors duration-150 ease-out ${focusRing} ${
-                  active ? 'border-brand bg-brand text-ink' : 'border-line bg-white text-muted hover:border-line-strong hover:text-ink'}`
-                  }>
-                  
+                    active
+                      ? 'border-brand bg-brand text-ink'
+                      : 'border-line bg-white text-muted hover:border-line-strong hover:text-ink'
+                  }`}>
                   {p.label}
                 </button>);
-
             })}
           </div>
         </div>
         <div className="lg:w-72">
           <label htmlFor="target-time" className="flex items-baseline justify-between text-sm font-medium text-ink">
-            Forecast target time
+            Observation time
             <span className="font-mono text-base">{data.hours[hourIndex]}</span>
           </label>
           <input
@@ -87,7 +86,6 @@ function DashboardBody() {
             onChange={(e) => d.setHourIndex(Number(e.target.value))}
             aria-valuetext={data.hours[hourIndex]}
             className="mt-3 w-full accent-[#F5C542]" />
-          
           <div className="mt-1 flex justify-between font-mono text-xs text-muted">
             <span>{data.hours[0]}</span>
             <span>{data.hours[data.hours.length - 1]}</span>
@@ -97,7 +95,7 @@ function DashboardBody() {
 
       <div className="mt-6 grid gap-8 lg:grid-cols-12">
         <div className="lg:col-span-8">
-          <h3 className="text-base font-semibold text-ink">Forecast history · {param.label}</h3>
+          <h3 className="text-base font-semibold text-ink">Observation history · {param.label}</h3>
           <div className="mt-4">
             <ParameterChart param={param} rows={d.chartRows} hours={data.hours} hourIndex={hourIndex} cloud={data.cloud} />
           </div>
@@ -110,11 +108,9 @@ function DashboardBody() {
             target={data.hours[hourIndex]}
             issued={issued}
             horizonHours={data.horizonHours} />
-          
         </div>
       </div>
     </>);
-
 }
 
 export function VerificationDashboard() {
@@ -124,17 +120,24 @@ export function VerificationDashboard() {
         id="dashboard-heading"
         label="Dashboard"
         title="Forecast Verification Dashboard"
-        intro="See how the system checks each forecast against the observation that arrives later. Choose a parameter and move the target time." />
-      
+        intro="Live METAR observations from Bandaranaike International Airport (VCBI) fetched directly from aviationweather.gov. Choose a parameter and move the slider to explore the past 12 hours." />
 
       <div className="mt-10 rounded-2xl border border-line bg-white p-5 sm:p-8">
-        <p className="mb-6 inline-flex items-center gap-2 rounded-md border border-brand bg-brand-soft px-3 py-1.5 text-sm font-semibold tracking-wide text-ink" role="note">
-          <span className="h-2 w-2 rounded-full bg-brand-ink" aria-hidden="true" />
-          {DEMO_LABEL}
-          <span className="font-normal tracking-normal text-muted">· sample values, not experiment results</span>
+        {/* Live data badge */}
+        <p
+          className="mb-6 inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-semibold tracking-wide text-emerald-800"
+          role="note">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+          </span>
+          <RadioIcon className="h-3.5 w-3.5" aria-hidden="true" />
+          LIVE DATA · VCBI
+          <span className="font-normal tracking-normal text-emerald-600">
+            · aviationweather.gov · Past 12 h METAR
+          </span>
         </p>
         <DashboardBody />
       </div>
     </Section>);
-
 }

@@ -1,0 +1,74 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3179 >>
+stream
+0.06 0.16 0.32 rg
+0 770 595 72 re f
+0.22 0.74 0.97 rg
+0 766 595 4 re f
+BT /F2 10 Tf 1 1 1 rg 40 812 Td (SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY \(SLIIT\)  FACULTY OF COMPUTING) Tj ET
+BT /F1 9 Tf 0.8 0.9 1 rg 40 798 Td (Project ID: R26-IT-132 | Centre of Excellence for AI \(CoEAI\) | Year: 2026) Tj ET
+BT /F2 9 Tf 0.22 0.74 0.97 rg 40 782 Td ([INDIVIDUAL RESEARCH THESIS DOCUMENTATION]) Tj ET
+0 0 0 rg
+BT /F2 15 Tf 40 720 Td (Short-Term Runway Wind Vector Prediction & Component Analysis via XGBoost and TFT) Tj ET
+BT /F2 9.5 Tf 0.1 0.2 0.4 rg 40 696 Td (Authors / Researchers:) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 40 682 Td (Ranasingha R.A.A.D. \(Student ID: IT22269720\) | Specialization: Information Technology) Tj ET
+0.85 0.88 0.92 RG 1 w
+40 662 m 555 662 l S
+0.96 0.97 0.99 rg
+40 580 515 70 re f
+0.8 0.85 0.9 RG 0.8 w
+40 580 515 70 re S
+BT /F2 10 Tf 0.06 0.16 0.32 rg 50 635 Td (EXECUTIVE ABSTRACT & SYSTEM SCOPE) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 618 Td (Individual thesis focused on hyper-local surface wind speed and direction) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 606 Td (forecasting for runway 04/22 at Bandaranaike International Airport. Combines gradient) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 594 Td (boosted trees and Temporal Fusion Transformers to generate operational headwind and) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 582 Td (crosswind components.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 548 Td (1. Operational Significance of Runway Wind Analysis) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 534 Td (Crosswind limits are decisive safety thresholds for commercial airliner landing operations.) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 522 Td (Sudden gusts during monsoon transitions cause unstable approaches and go-arounds at VCBI.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 494 Td (2. Feature Engineering & Multi-Horizon Modeling) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 480 Td (Continuous wind direction is encoded using sine and cosine cyclical transformations to) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 468 Td (overcome the 0/360 degree discontinuity.) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 452 Td (Models tested: XGBoost regression on lag features vs Temporal Fusion Transformer \(TFT\)) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 440 Td (utilizing multi-head self-attention mechanisms for multi-horizon forecasts.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 412 Td (3. Results and Runway Component Integration) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 398 Td (" XGBoost Baseline MAE: 1.69 knots) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 382 Td (" Temporal Fusion Transformer \(TFT\) MAE: < 1.0 knot \(superior temporal attention\)) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 366 Td (" Automated headwind and crosswind decomposition provides real-time runway occupancy and) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 354 Td (safety advisories within the interactive pilot portal.) Tj ET
+0.85 0.88 0.92 RG 0.5 w
+40 45 m 555 45 l S
+BT /F1 8 Tf 0.5 0.55 0.6 rg 40 32 Td (Hyper-Local Aviation Weather Forecast Verification System  Bandaranaike International Airport \(VCBI\)) Tj ET
+BT /F2 8 Tf 0.06 0.16 0.32 rg 475 32 Td (Official Research Doc) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3627
+%%EOF

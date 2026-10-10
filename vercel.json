@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/weather/:path*",
+      "destination": "https://aviationweather.gov/api/data/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

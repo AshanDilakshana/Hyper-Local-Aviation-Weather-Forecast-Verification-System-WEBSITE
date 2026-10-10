@@ -1,12 +1,11 @@
 import React from 'react';
 import { Section } from '../components/layout/Section';
 import { SectionHeading } from '../components/SectionHeading';
-import { PanelCommentForm } from '../components/panel/PanelCommentForm';
 import { PanelCommentList } from '../components/panel/PanelCommentList';
 import { usePanelComments } from '../hooks/usePanelComments';
 
 export function PanelComments() {
-  const { comments, add, remove, setStatus, storageError } = usePanelComments();
+  const { comments, remove, setStatus } = usePanelComments();
 
   return (
     <Section id="panel-comments" labelledBy="panel-heading" tone="alt" asPage>
@@ -15,19 +14,12 @@ export function PanelComments() {
         id="panel-heading"
         label="Panel Comments"
         title="Review Panel Feedback"
-        intro="Comments from each review stage and how the team responded, grouped by stage." />
-      
+        intro="Official feedback from each review stage, grouped by presentation and student ID."
+      />
 
-      <div className="mt-12 grid gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-8">
-          <PanelCommentList comments={comments} onRemove={remove} onStatusChange={setStatus} />
-        </div>
-        <div className="lg:col-span-4">
-          <div className="lg:sticky lg:top-24">
-            <PanelCommentForm onAdd={add} storageError={storageError} />
-          </div>
-        </div>
+      <div className="mt-10 max-w-5xl">
+        <PanelCommentList comments={comments} onRemove={remove} onStatusChange={setStatus} />
       </div>
-    </Section>);
-
+    </Section>
+  );
 }
