@@ -110,4 +110,11 @@ export interface ResearchDocument {
   fileName: string;
   summaryLabel: string;
   summary: string;
+  authors?: string;
+  studentId?: string;
+  category?: 'paper' | 'taf' | 'group-thesis' | 'individual-thesis';
+  role?: string;
+  metric?: string;
+  highlights?: string[];
+  fileSize?: string;
 }

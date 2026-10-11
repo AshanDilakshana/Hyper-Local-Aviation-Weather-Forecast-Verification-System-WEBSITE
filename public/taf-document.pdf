@@ -1,0 +1,80 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3831 >>
+stream
+0.06 0.16 0.32 rg
+0 770 595 72 re f
+0.22 0.74 0.97 rg
+0 766 595 4 re f
+BT /F2 10 Tf 1 1 1 rg 40 812 Td (SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY \(SLIIT\)  FACULTY OF COMPUTING) Tj ET
+BT /F1 9 Tf 0.8 0.9 1 rg 40 798 Td (Project ID: R26-IT-132 | Centre of Excellence for AI \(CoEAI\) | Year: 2026) Tj ET
+BT /F2 9 Tf 0.22 0.74 0.97 rg 40 782 Td ([TAF STANDARD & VERIFICATION GUIDE DOCUMENTATION]) Tj ET
+0 0 0 rg
+BT /F2 15 Tf 40 720 Td (Aviation Weather Terminal Aerodrome Forecast \(TAF\) Specification & Verification Baseline) Tj ET
+BT /F2 9.5 Tf 0.1 0.2 0.4 rg 40 696 Td (Authors / Researchers:) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 40 682 Td (Research Team R26-IT-132 | Department of Meteorology Sri Lanka & SLIIT CoEAI) Tj ET
+0.85 0.88 0.92 RG 1 w
+40 662 m 555 662 l S
+0.96 0.97 0.99 rg
+40 580 515 70 re f
+0.8 0.85 0.9 RG 0.8 w
+40 580 515 70 re S
+BT /F2 10 Tf 0.06 0.16 0.32 rg 50 635 Td (EXECUTIVE ABSTRACT & SYSTEM SCOPE) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 618 Td (Standard operational guideline and technical specification for Terminal Aerodrome) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 606 Td (Forecast \(TAF\) decoding, verification criteria, and ICAO Annex 3 compliance. Provides) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 594 Td (the meteorological benchmark and threshold values utilized by the automated forecast) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 582 Td (verification engine.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 548 Td (1. Purpose and Scope of TAF Verification) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 534 Td (Terminal Aerodrome Forecasts \(TAF\) represent concise statements of expected meteorological) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 522 Td (conditions at an airport for a specified period \(typically 24 to 30 hours\).) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 506 Td (Automated verification compares issued TAF reports against valid METAR ground observations) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 494 Td (at 30-minute intervals to evaluate operational forecast fidelity and identify systematic) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 482 Td (model biases.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 454 Td (2. ICAO Annex 3 Operational Thresholds for VCBI) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 440 Td (" Wind Direction & Speed: Significant change defined as direction variation >= 30 deg when) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 428 Td (mean speed before or after change is >= 20 kt, or speed change >= 10 kt.) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 412 Td (" Visibility Thresholds: Verified against category milestones: 800m, 1500m, 3000m, and) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 400 Td (5000m for precision instrument approaches.) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 384 Td (" Cloud Base Height: Significant changes monitored at 100ft, 200ft, 500ft, 1000ft, and) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 372 Td (1500ft ceiling minima.) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 356 Td (" Significant Weather: Onset and cessation of convective storms, heavy tropical rain \(RA\),) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 344 Td (and mist/fog \(FG/BR\).) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 316 Td (3. Verification Metrics & Scoring Algorithms) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 302 Td (The verification pipeline employs categorical scoring \(Hit Rate, False Alarm Ratio,) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 290 Td (Critical Success Index\) combined with continuous error metrics \(MAE, RMSE\) across each) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 278 Td (forecast validity window.) Tj ET
+0.85 0.88 0.92 RG 0.5 w
+40 45 m 555 45 l S
+BT /F1 8 Tf 0.5 0.55 0.6 rg 40 32 Td (Hyper-Local Aviation Weather Forecast Verification System  Bandaranaike International Airport \(VCBI\)) Tj ET
+BT /F2 8 Tf 0.06 0.16 0.32 rg 475 32 Td (Official Research Doc) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4279
+%%EOF

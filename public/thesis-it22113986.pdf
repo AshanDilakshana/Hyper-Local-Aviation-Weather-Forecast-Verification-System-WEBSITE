@@ -1,0 +1,78 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3578 >>
+stream
+0.06 0.16 0.32 rg
+0 770 595 72 re f
+0.22 0.74 0.97 rg
+0 766 595 4 re f
+BT /F2 10 Tf 1 1 1 rg 40 812 Td (SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY \(SLIIT\)  FACULTY OF COMPUTING) Tj ET
+BT /F1 9 Tf 0.8 0.9 1 rg 40 798 Td (Project ID: R26-IT-132 | Centre of Excellence for AI \(CoEAI\) | Year: 2026) Tj ET
+BT /F2 9 Tf 0.22 0.74 0.97 rg 40 782 Td ([INDIVIDUAL RESEARCH THESIS DOCUMENTATION]) Tj ET
+0 0 0 rg
+BT /F2 15 Tf 40 720 Td (Coupled Atmospheric Temperature and Pressure Prediction using Hybrid RF-LSTM Architecture) Tj ET
+BT /F2 9.5 Tf 0.1 0.2 0.4 rg 40 696 Td (Authors / Researchers:) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 40 682 Td (Sankadeepa W.D.I. \(Student ID: IT22113986\) | Specialization: Information Technology) Tj ET
+0.85 0.88 0.92 RG 1 w
+40 662 m 555 662 l S
+0.96 0.97 0.99 rg
+40 580 515 70 re f
+0.8 0.85 0.9 RG 0.8 w
+40 580 515 70 re S
+BT /F2 10 Tf 0.06 0.16 0.32 rg 50 635 Td (EXECUTIVE ABSTRACT & SYSTEM SCOPE) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 618 Td (Individual thesis investigating the physical coupling of ambient temperature and) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 606 Td (barometric pressure \(QNH\) at VCBI. Demonstrates that a hybrid Random Forest - LSTM) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 594 Td (pipeline outperforms isolated single-variable forecasting models, directly improving) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 582 Td (density altitude safety calculations.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 548 Td (1. Research Problem and Motivation) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 534 Td (Temperature and atmospheric pressure directly dictate air density, which governs aircraft) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 522 Td (lift, engine thrust, and takeoff run distance.) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 506 Td (Predicting temperature and pressure in isolation neglects the thermodynamic interdependence) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 494 Td (governed by daily solar irradiance and diurnal heating cycles.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 466 Td (2. Methodology: Hybrid RF-LSTM Architecture) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 452 Td (The research implements a two-stage hybrid framework: Random Forest captures non-linear) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 440 Td (tabular feature interactions and lag attributes, while LSTM recurrent units learn multi-hour) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 428 Td (temporal dependencies and diurnal shifts.) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 412 Td (Evaluated on historical VCBI records from the Department of Meteorology across both) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 400 Td (Northeast and Southwest monsoon seasons.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 372 Td (3. Experimental Findings & Contribution) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 358 Td (" Baseline LSTM: R2 = 0.25 \(limited sequence history generalization\)) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 342 Td (" Baseline Random Forest: R2 = 0.68, MAE = 1.14) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 326 Td (" Proposed Hybrid RF-LSTM: R2 = 0.84, MAE = 0.86 \(superior explained variance\)) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 310 Td (" Validated density altitude output accurately identifies high-risk midday takeoff) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 298 Td (conditions.) Tj ET
+0.85 0.88 0.92 RG 0.5 w
+40 45 m 555 45 l S
+BT /F1 8 Tf 0.5 0.55 0.6 rg 40 32 Td (Hyper-Local Aviation Weather Forecast Verification System  Bandaranaike International Airport \(VCBI\)) Tj ET
+BT /F2 8 Tf 0.06 0.16 0.32 rg 475 32 Td (Official Research Doc) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4026
+%%EOF

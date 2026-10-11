@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Maximize2Icon, RotateCcwIcon } from 'lucide-react';
 import { buttonStyles } from '../../utils/styles';
 import { Section } from '../layout/Section';
 import { SectionHeading } from '../SectionHeading';
 import { Modal } from '../Modal';
 import { ArchitectureDiagram } from './ArchitectureDiagram';
+import { SystemArchitectureDiagram } from './SystemArchitectureDiagram';
 import { useScreenInit } from '../../useScreenInit.js';
 
 export function ArchitectureSection({ asPage = false }: {asPage?: boolean;}) {
@@ -19,15 +20,34 @@ export function ArchitectureSection({ asPage = false }: {asPage?: boolean;}) {
         id="architecture-heading"
         label="Architecture"
         title="From Weather Data to Verified Forecasts"
-        intro="Five layers move data from airport sources to the people who use the forecasts.">
-        
+        intro="Five layers move data from airport sources to the people who use the forecasts. Standard flowchart symbols: cylinders = databases, hexagons = AI/ML models, parallelograms = I/O processes, diamonds = decision points.">
+
         <button type="button" onClick={() => setFull(true)} className={`${buttonStyles.secondary} self-start lg:self-auto`}>
           <Maximize2Icon className="h-4 w-4" aria-hidden="true" />
           View Full Diagram
         </button>
       </SectionHeading>
 
+      {/* ── Primary: Animated System Architecture Diagram ── */}
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+      >
+        <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-muted">
+          System Architecture · Standard Notation
+        </h3>
+        <div className="overflow-x-auto rounded-2xl border border-line shadow-lg">
+          <div className="min-w-[900px]">
+            <SystemArchitectureDiagram />
+          </div>
+        </div>
+      </motion.div>
+
+      {/* ── Secondary: layer cards ── */}
       <div className="mt-12 rounded-2xl border border-line bg-alt p-5 sm:p-8">
+        <h3 className="mb-6 text-sm font-semibold uppercase tracking-widest text-muted">Layer Detail</h3>
         <ArchitectureDiagram />
         <div className="mt-6 flex items-start gap-2.5 border-t border-line pt-5 text-[15px] text-muted">
           <RotateCcwIcon className="mt-0.5 h-4 w-4 flex-none text-brand-ink" aria-hidden="true" />
@@ -41,6 +61,11 @@ export function ArchitectureSection({ asPage = false }: {asPage?: boolean;}) {
         {full &&
         <Modal title="System architecture" subtitle="Full diagram · scroll horizontally on small screens" size="xl" onClose={() => setFull(false)}>
             <div className="overflow-x-auto pb-2">
+              <div className="min-w-[1080px]">
+                <SystemArchitectureDiagram wide />
+              </div>
+            </div>
+            <div className="mt-6 overflow-x-auto pb-2">
               <div className="min-w-[1080px]">
                 <ArchitectureDiagram wide />
               </div>

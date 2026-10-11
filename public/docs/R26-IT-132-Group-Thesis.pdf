@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3573 >>
+stream
+0.06 0.16 0.32 rg
+0 770 595 72 re f
+0.22 0.74 0.97 rg
+0 766 595 4 re f
+BT /F2 10 Tf 1 1 1 rg 40 812 Td (SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY \(SLIIT\)  FACULTY OF COMPUTING) Tj ET
+BT /F1 9 Tf 0.8 0.9 1 rg 40 798 Td (Project ID: R26-IT-132 | Centre of Excellence for AI \(CoEAI\) | Year: 2026) Tj ET
+BT /F2 9 Tf 0.22 0.74 0.97 rg 40 782 Td ([GROUP RESEARCH THESIS DOCUMENTATION]) Tj ET
+0 0 0 rg
+BT /F2 15 Tf 40 720 Td (Comprehensive Hyper-Local Aviation Weather Verification & Multi-Model Forecasting System) Tj ET
+BT /F2 9.5 Tf 0.1 0.2 0.4 rg 40 696 Td (Authors / Researchers:) Tj ET
+BT /F1 9 Tf 0.2 0.2 0.2 rg 40 682 Td (Sankadeepa W.D.I., Ranasingha R.A.A.D., Jayawardhana H.M.S.I., Jayathilaka P.K.V.K. | Supervised by SLIIT CoEAI Faculty) Tj ET
+0.85 0.88 0.92 RG 1 w
+40 662 m 555 662 l S
+0.96 0.97 0.99 rg
+40 580 515 70 re f
+0.8 0.85 0.9 RG 0.8 w
+40 580 515 70 re S
+BT /F2 10 Tf 0.06 0.16 0.32 rg 50 635 Td (EXECUTIVE ABSTRACT & SYSTEM SCOPE) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 618 Td (Final comprehensive group thesis presenting the end-to-end design, data integration) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 606 Td (pipeline, machine learning architectures, and cloud-native verification platform for) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 594 Td (Bandaranaike International Airport \(VCBI\). Synthesizes individual contributions into) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.3 rg 50 582 Td (an operational aviation support system.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 548 Td (1. Executive Project Summary) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 534 Td (This thesis addresses the critical challenge of aviation safety under volatile Sri Lankan) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 522 Td (monsoon regimes. Integrating official observational archives from the Department of) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 510 Td (Meteorology with state-of-the-art AI, the project delivers a unified verification dashboard.) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 482 Td (2. System Architecture & End-to-End Pipeline) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 468 Td (The system connects live Aviation Weather API endpoints with four dedicated ML) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 456 Td (microservices:) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 440 Td (1. Atmospheric State Engine \(Temperature, QNH & Density Altitude\)) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 424 Td (2. Runway Aerodynamics Module \(Wind speed/direction, Runway 04/22 crosswind vectors\)) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 408 Td (3. Visibility & Ceiling Classification Module \(Fog, mist, low cloud threshold warnings\)) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 392 Td (4. Humidity & Pressure Trend Pipeline \(Dew point, relative humidity derivation, barometric) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 380 Td (tendency\)) Tj ET
+BT /F2 11 Tf 0.08 0.22 0.44 rg 40 352 Td (3. Deployment, Security & Operational Verification) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 338 Td (Implemented with a high-performance React/Vite front-end and a Python predictive core, the) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 326 Td (system features sub-second response times, automated METAR/TAF parity checks, and) Tj ET
+BT /F1 8.5 Tf 0.22 0.24 0.28 rg 40 314 Td (interactive visual analytics for pilots and dispatchers.) Tj ET
+0.85 0.88 0.92 RG 0.5 w
+40 45 m 555 45 l S
+BT /F1 8 Tf 0.5 0.55 0.6 rg 40 32 Td (Hyper-Local Aviation Weather Forecast Verification System  Bandaranaike International Airport \(VCBI\)) Tj ET
+BT /F2 8 Tf 0.06 0.16 0.32 rg 475 32 Td (Official Research Doc) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4021
+%%EOF
